@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC97E1CE-485A-4B22-9317-21FD85B26CD4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tarifvakti</RootNamespace>
+    <AssemblyName>tarifvakti</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44311</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Blog.aspx" />
+    <Content Include="BlogDetay.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Galeri.aspx" />
+    <Content Include="GirisEkrani.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="KayıtOl.aspx" />
+    <Content Include="Kurumsal.aspx" />
+    <Content Include="Paketler.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Anasayfa.Master" />
+    <Content Include="AltSayfa.Master" />
+    <Content Include="TarifDetay.aspx" />
+    <Content Include="Yönetim\assets\css\girisstyle.css" />
+    <Content Include="Yönetim\assets\css\style.css" />
+    <Content Include="Yönetim\assets\images\blog\istockphoto-517188688-612x612.jpg" />
+    <Content Include="Yönetim\assets\images\dashboard\circle.svg" />
+    <Content Include="Yönetim\assets\images\dashboard\img_1.jpg" />
+    <Content Include="Yönetim\assets\images\dashboard\img_2.jpg" />
+    <Content Include="Yönetim\assets\images\dashboard\img_3.jpg" />
+    <Content Include="Yönetim\assets\images\dashboard\img_4.jpg" />
+    <Content Include="Yönetim\assets\images\faces-clipart\pic-1.png" />
+    <Content Include="Yönetim\assets\images\faces-clipart\pic-2.png" />
+    <Content Include="Yönetim\assets\images\faces-clipart\pic-3.png" />
+    <Content Include="Yönetim\assets\images\faces-clipart\pic-4.png" />
+    <Content Include="Yönetim\assets\images\faces\face1.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face10.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face11.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face12.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face13.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face14.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face15.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face16.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face17.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face18.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face19.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face2.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face20.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face21.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face22.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face23.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face24.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face25.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face26.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face27.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face3.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face4.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face5.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face6.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face7.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face8.jpg" />
+    <Content Include="Yönetim\assets\images\faces\face9.jpg" />
+    <Content Include="Yönetim\assets\images\favicon.png" />
+    <Content Include="Yönetim\assets\images\logo-mini.svg" />
+    <Content Include="Yönetim\assets\images\logo.svg" />
+    <Content Include="Yönetim\assets\js\chart.js" />
+    <Content Include="Yönetim\assets\js\dashboard.js" />
+    <Content Include="Yönetim\assets\js\file-upload.js" />
+    <Content Include="Yönetim\assets\js\misc.js" />
+    <Content Include="Yönetim\assets\js\off-canvas.js" />
+    <Content Include="Yönetim\assets\vendors\css\vendor.bundle.base.css" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\css\materialdesignicons.css" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\css\materialdesignicons.min.css" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\preview.html" />
+    <Content Include="Yönetim\assets\vendors\js\vendor.bundle.addons.js" />
+    <Content Include="Yönetim\assets\vendors\js\vendor.bundle.base.js" />
+    <Content Include="Yönetim\Ayarlar.aspx" />
+    <Content Include="Yönetim\BlogDüzenleSil.aspx" />
+    <Content Include="Yönetim\BlogEkle.aspx" />
+    <Content Include="Yönetim\BlogKategori.aspx" />
+    <Content Include="Yönetim\Default.aspx" />
+    <Content Include="Yönetim\GaleriEkleSil.aspx" />
+    <Content Include="Yönetim\GaleriKategori.aspx" />
+    <Content Include="Yönetim\Kurumsal.aspx" />
+    <Content Include="Yönetim\PaketDüzenleSil.aspx" />
+    <Content Include="Yönetim\PaketEkle.aspx" />
+    <Content Include="Yönetim\SefBlogDüzenle.aspx" />
+    <Content Include="Yönetim\SefBloglari.aspx" />
+    <Content Include="İletişim.aspx" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Yönetim\Admin.Master" />
+    <Content Include="Yönetim\assets\css\maps\style.css.map" />
+    <Content Include="Yönetim\assets\fonts\.DS_Store" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\.DS_Store" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Bold.eot" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Bold.woff" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Light.eot" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Light.woff" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Medium.eot" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Medium.woff" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Regular.eot" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Regular.woff" />
+    <Content Include="Yönetim\assets\fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <Content Include="Yönetim\assets\images\.DS_Store" />
+    <Content Include="Yönetim\assets\images\dashboard\.DS_Store" />
+    <Content Include="Yönetim\assets\images\faces\.DS_Store" />
+    <Content Include="Yönetim\assets\js\.DS_Store" />
+    <Content Include="Yönetim\assets\scss\.DS_Store" />
+    <Content Include="Yönetim\assets\scss\components\.DS_Store" />
+    <Content Include="Yönetim\assets\scss\components\_badges.scss" />
+    <Content Include="Yönetim\assets\scss\components\_bootstrap-progress.scss" />
+    <Content Include="Yönetim\assets\scss\components\_buttons.scss" />
+    <Content Include="Yönetim\assets\scss\components\_cards.scss" />
+    <Content Include="Yönetim\assets\scss\components\_checkbox-radio.scss" />
+    <Content Include="Yönetim\assets\scss\components\_dropdown.scss" />
+    <Content Include="Yönetim\assets\scss\components\_forms.scss" />
+    <Content Include="Yönetim\assets\scss\components\_icons.scss" />
+    <Content Include="Yönetim\assets\scss\components\_lists.scss" />
+    <Content Include="Yönetim\assets\scss\components\_preview.scss" />
+    <Content Include="Yönetim\assets\scss\components\_tables.scss" />
+    <Content Include="Yönetim\assets\scss\landing-screens\_auth.scss" />
+    <Content Include="Yönetim\assets\scss\mixins\.DS_Store" />
+    <Content Include="Yönetim\assets\scss\mixins\_animation.scss" />
+    <Content Include="Yönetim\assets\scss\mixins\_background.scss" />
+    <Content Include="Yönetim\assets\scss\mixins\_badges.scss" />
+    <Content Include="Yönetim\assets\scss\mixins\_blockqoute.scss" />
+    <Content Include="Yönetim\assets\scss\mixins\_buttons.scss" />
+    <Content Include="Yönetim\assets\scss\mixins\_cards.scss" />
+    <Content Include="Yönetim\assets\scss\mixins\_misc.scss" />
+    <Content Include="Yönetim\assets\scss\style.scss" />
+    <Content Include="Yönetim\assets\scss\_background.scss" />
+    <Content Include="Yönetim\assets\scss\_demo.scss" />
+    <Content Include="Yönetim\assets\scss\_fonts.scss" />
+    <Content Include="Yönetim\assets\scss\_footer.scss" />
+    <Content Include="Yönetim\assets\scss\_functions.scss" />
+    <Content Include="Yönetim\assets\scss\_misc.scss" />
+    <Content Include="Yönetim\assets\scss\_navbar.scss" />
+    <Content Include="Yönetim\assets\scss\_reset.scss" />
+    <Content Include="Yönetim\assets\scss\_sidebar.scss" />
+    <Content Include="Yönetim\assets\scss\_typography.scss" />
+    <Content Include="Yönetim\assets\scss\_utilities.scss" />
+    <Content Include="Yönetim\assets\scss\_variables.scss" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\bower.json" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\css\materialdesignicons.css.map" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\css\materialdesignicons.min.css.map" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\license.md" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\package.json" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\README.md" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\scss\materialdesignicons.scss" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\scss\_animated.scss" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\scss\_core.scss" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\scss\_extras.scss" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\scss\_functions.scss" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\scss\_icons.scss" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\scss\_path.scss" />
+    <Content Include="Yönetim\assets\vendors\iconfonts\mdi\scss\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AltSayfa.Master.cs">
+      <DependentUpon>AltSayfa.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AltSayfa.Master.designer.cs">
+      <DependentUpon>AltSayfa.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Anasayfa.Master.cs">
+      <DependentUpon>Anasayfa.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Anasayfa.Master.designer.cs">
+      <DependentUpon>Anasayfa.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Blog.aspx.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blog.aspx.designer.cs">
+      <DependentUpon>Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlogDetay.aspx.cs">
+      <DependentUpon>BlogDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogDetay.aspx.designer.cs">
+      <DependentUpon>BlogDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Galeri.aspx.cs">
+      <DependentUpon>Galeri.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Galeri.aspx.designer.cs">
+      <DependentUpon>Galeri.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GirisEkrani.aspx.cs">
+      <DependentUpon>GirisEkrani.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GirisEkrani.aspx.designer.cs">
+      <DependentUpon>GirisEkrani.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="KayıtOl.aspx.cs">
+      <DependentUpon>KayıtOl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="KayıtOl.aspx.designer.cs">
+      <DependentUpon>KayıtOl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Kurumsal.aspx.cs">
+      <DependentUpon>Kurumsal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Kurumsal.aspx.designer.cs">
+      <DependentUpon>Kurumsal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Paketler.aspx.cs">
+      <DependentUpon>Paketler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paketler.aspx.designer.cs">
+      <DependentUpon>Paketler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TarifDetay.aspx.cs">
+      <DependentUpon>TarifDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TarifDetay.aspx.designer.cs">
+      <DependentUpon>TarifDetay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\Ayarlar.aspx.cs">
+      <DependentUpon>Ayarlar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\Ayarlar.aspx.designer.cs">
+      <DependentUpon>Ayarlar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\BlogDüzenleSil.aspx.cs">
+      <DependentUpon>BlogDüzenleSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\BlogDüzenleSil.aspx.designer.cs">
+      <DependentUpon>BlogDüzenleSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\BlogEkle.aspx.cs">
+      <DependentUpon>BlogEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\BlogEkle.aspx.designer.cs">
+      <DependentUpon>BlogEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\BlogKategori.aspx.cs">
+      <DependentUpon>BlogKategori.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\BlogKategori.aspx.designer.cs">
+      <DependentUpon>BlogKategori.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\GaleriEkleSil.aspx.cs">
+      <DependentUpon>GaleriEkleSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\GaleriEkleSil.aspx.designer.cs">
+      <DependentUpon>GaleriEkleSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\GaleriKategori.aspx.cs">
+      <DependentUpon>GaleriKategori.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\GaleriKategori.aspx.designer.cs">
+      <DependentUpon>GaleriKategori.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\Kurumsal.aspx.cs">
+      <DependentUpon>Kurumsal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\Kurumsal.aspx.designer.cs">
+      <DependentUpon>Kurumsal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\PaketDüzenleSil.aspx.cs">
+      <DependentUpon>PaketDüzenleSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\PaketDüzenleSil.aspx.designer.cs">
+      <DependentUpon>PaketDüzenleSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\PaketEkle.aspx.cs">
+      <DependentUpon>PaketEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\PaketEkle.aspx.designer.cs">
+      <DependentUpon>PaketEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\SefBlogDüzenle.aspx.cs">
+      <DependentUpon>SefBlogDüzenle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\SefBlogDüzenle.aspx.designer.cs">
+      <DependentUpon>SefBlogDüzenle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yönetim\SefBloglari.aspx.cs">
+      <DependentUpon>SefBloglari.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yönetim\SefBloglari.aspx.designer.cs">
+      <DependentUpon>SefBloglari.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="İletişim.aspx.cs">
+      <DependentUpon>İletişim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="İletişim.aspx.designer.cs">
+      <DependentUpon>İletişim.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Yönetim\assets\css\maps\girisresim\" />
+    <Folder Include="Yönetim\assets\images\galeri\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65083</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44311/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
