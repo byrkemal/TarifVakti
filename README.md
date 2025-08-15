@@ -9,7 +9,7 @@
 - [Kurulum](#-kurulum)
 - [Sayfa Yapısı](#-sayfa-yapısı)
 - [İletişim](#-iletişim)
-
+ 
 ---
 ## 🎯 Proje Hakkında
 
